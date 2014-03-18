@@ -1,2 +1,232 @@
 @import "chanel-sass-lib/library";
 @import "normalize/normalize";
+
+html, body {
+	height: 100%;
+	font-family: 'Cinzel', Georgia, Cambria, "Times New Roman", Times,serif;
+	line-height: 1.5;
+	font-size: 14px;
+
+	a {
+		text-decoration: none;
+	}
+
+	p {
+		font-family: Arial, 'LiHei Pro', 新細明體, sans-serif;
+	}
+}
+
+@mixin navBar {
+	position: absolute;
+	right: 40px;
+	top: 30px;
+	height: 24px;
+	overflow: hidden;
+
+	li {
+		float: left;
+		display: inline-block;
+		padding: 0 20px;
+		font-size: 16px;
+
+		a {
+			color: #ffffff;
+
+			&:hover {
+				border-bottom: 2px solid #ffffff;
+			}
+		}
+	}
+}
+
+#index, #CV, #autobiography, #product, #UX, #contact {
+	position: relative;
+
+	.nav { @include navBar;}
+}
+
+#index {
+	background: url(../images/index_bg.png) no-repeat fixed top left;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 100%;
+
+	.title {
+		position: absolute;
+		right: 220px;
+		top: 200px;
+		
+		h1 {
+			font-size: 60px;
+			font-family: 'Gloria Hallelujah', cursive;
+			margin: 0;
+		}
+
+		p {
+			font-size: 20px;
+			text-align: right;
+			margin: 8px 0;
+		}
+	}
+}
+
+#CV {
+	background: url(../images/wood.png) repeat top left;
+}
+
+#autobiography {
+	background: url(../images/dot.png) repeat top left;
+	height: 1050px;
+
+	.articleWrap {
+		position: absolute;
+		width: 100%;
+		top: 100px;
+
+		.article {
+			width: 740px;
+			height: 820px;
+			padding: 20px 40px;
+			margin: 0 auto;
+			background-color: #ffffff;
+
+			p {
+				color: #585858;
+				letter-spacing: 0.06em;
+
+				.bold {
+					font-weight: bolder;
+					font-size: 18px;
+					line-height: 26px;
+					color: #000000;
+				}
+
+				.baseline {
+					text-decoration: underline;
+					color: #000000;
+				}
+			}
+
+			table {
+				margin: 0 auto;
+				border: 1px solid #b2b2b2;
+				margin-bottom: 30px;
+
+				th, td {
+					text-align: center;
+					padding: 4px 6px;
+					border: 1px solid #b2b2b2;
+				}
+
+				th {
+					background-color: #cccccc;
+				}
+			}
+		}
+
+		.download {
+			margin: 30px auto;
+			width: 820px;
+			text-align: right;
+
+			a {
+				padding: 5px 10px;
+				margin: 0 1px;
+				background-color: #ffffff;
+				color: #000000;
+				font-family: Arial, 'LiHei Pro', 新細明體, sans-serif;
+
+				&:hover {
+					background-color: #bcbcbc;
+					@include shadow(4px, 4px, 4px, 0, rgba(#969696, .6));
+				}
+			}
+		}
+	}
+}
+
+#product {
+	background-color: #5c5c5c;
+	height: 100%;
+
+	.pdf {
+		position: absolute;
+		top: 70px;
+		width: 100%;
+
+		.pdfWrap {
+			width: 1200px;
+			overflow: hidden;
+			margin: 10px auto;
+
+			#readerreader {
+				width: 1400px;
+			}		
+		}
+	}
+}
+
+#UX {
+	background-color: #CED7D2;
+	height: 800px;
+
+	.explain {
+		position: absolute;
+		top: 100px;
+		width: 100%;
+
+		.explainWrap {
+			width: 900px;
+			margin: 0 auto;
+
+			.card {
+				background-color: #ffffff;
+				width: 800px;
+				height: 220px;
+				margin: 10px auto;
+
+				a {
+					display: inline-block;
+					height: 220px;
+					overflow: hidden;
+
+					img { float: left;}
+
+					.short { 
+						float: right;
+						width: 300px;
+						padding: 15px 20px;
+
+						h3 {
+							font-family: 'Expletus Sans', cursive;
+							color: #000000;
+							margin: 25px 0 15px;
+						}
+
+						p {
+							line-height: 20px;
+							color: #838383;
+							font-size: 12px;
+							margin: 8px 0;
+
+							span {
+								color: blue;
+								padding-left: 5px;
+							}
+						}
+					}
+				}
+
+				&:hover {
+					@include shadow(4px, 4px, 4px, 0, rgba(#969696, .6));
+				}
+			}
+
+			.small {
+				height: 182px;
+			}
+		}
+	}
+}
