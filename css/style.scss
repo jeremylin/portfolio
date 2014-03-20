@@ -255,7 +255,7 @@ html, body {
 }
 
 #UX {
-	background-color: #CED7D2;
+	background-color: #50A7B8;
 	height: 800px;
 
 	.explain {
@@ -306,7 +306,7 @@ html, body {
 				}
 
 				&:hover {
-					@include shadow(4px, 4px, 4px, 0, rgba(#969696, .6));
+					@include shadow(6px, 6px, 4px, 0, rgba(16, 80, 122, 0.6));
 				}
 			}
 
