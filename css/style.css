@@ -371,10 +371,12 @@ html, body {
   font-family: 'Cinzel', Georgia, Cambria, "Times New Roman", Times,serif;
   line-height: 1.5;
   font-size: 14px; }
+  html ol, html ul, body ol, body ul {
+    list-style: none; }
   html a, body a {
     text-decoration: none; }
   html p, body p {
-    font-family: Arial, 'LiHei Pro', 新細明體, sans-serif; }
+    font-family: Arial, 'LiHei Pro', "新細明體", sans-serif; }
 
 #index, #CV, #autobiography, #product, #UX, #contact {
   position: relative; }
@@ -393,6 +395,13 @@ html, body {
         color: #ffffff; }
         #index .nav li a:hover, #CV .nav li a:hover, #autobiography .nav li a:hover, #product .nav li a:hover, #UX .nav li a:hover, #contact .nav li a:hover {
           border-bottom: 2px solid #ffffff; }
+    #index .nav .here, #CV .nav .here, #autobiography .nav .here, #product .nav .here, #UX .nav .here, #contact .nav .here {
+      background-color: #ffffff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      height: 20px;
+      line-height: 20px; }
 
 #index {
   background: url(../images/index_bg.png) no-repeat fixed top left;
@@ -414,58 +423,108 @@ html, body {
       text-align: right;
       margin: 8px 0; }
 
+#CV .articleWrap, #autobiography .articleWrap {
+  position: absolute;
+  width: 100%;
+  top: 100px; }
+  #CV .articleWrap .article, #autobiography .articleWrap .article {
+    width: 740px;
+    padding: 20px 40px;
+    margin: 0 auto;
+    background-color: #ffffff; }
+  #CV .articleWrap .download, #autobiography .articleWrap .download {
+    margin: 30px auto;
+    width: 820px;
+    text-align: right; }
+    #CV .articleWrap .download a, #autobiography .articleWrap .download a {
+      padding: 5px 10px;
+      margin: 0 1px;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, 'LiHei Pro', 新細明體, sans-serif; }
+      #CV .articleWrap .download a:hover, #autobiography .articleWrap .download a:hover {
+        background-color: #bcbcbc;
+        -moz-box-shadow: 4px 4px 4px 0 rgba(150, 150, 150, 0.6);
+        -webkit-box-shadow: 4px 4px 4px 0 rgba(150, 150, 150, 0.6);
+        box-shadow: 4px 4px 4px 0 rgba(150, 150, 150, 0.6); }
+
 #CV {
-  background: url(../images/wood.png) repeat top left; }
+  background: url(../images/wood.png) repeat top left;
+  height: 1150px; }
+  #CV .article {
+    height: 910px; }
+    #CV .article .top {
+      position: relative; }
+      #CV .article .top img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 42%; }
+      #CV .article .top h1 {
+        border-bottom: 1px dotted #bcbcbc; }
+      #CV .article .top ul {
+        padding-left: 0;
+        margin: 6px 0;
+        font-family: Arial, 'LiHei Pro', "新細明體", sans-serif; }
+      #CV .article .top p {
+        font-style: italic; }
+    #CV .article .bottom {
+      margin-top: 40px;
+      font-family: Arial, 'LiHei Pro', "新細明體", sans-serif; }
+      #CV .article .bottom .group {
+        overflow: hidden;
+        width: 680px;
+        margin: 15px auto; }
+        #CV .article .bottom .group .title {
+          width: 120px;
+          float: left;
+          text-align: right;
+          font-weight: bolder; }
+        #CV .article .bottom .group ul {
+          width: 500px;
+          float: right;
+          margin: 0;
+          border-left: 2px solid #cccccc;
+          color: #585858; }
+          #CV .article .bottom .group ul li {
+            line-height: 18px;
+            margin-bottom: 5px;
+            position: relative; }
+            #CV .article .bottom .group ul li .subInfo {
+              font-style: italic;
+              padding-left: 20px; }
+            #CV .article .bottom .group ul li a {
+              color: #1F96CE; }
+            #CV .article .bottom .group ul li .right {
+              position: absolute;
+              right: 70px; }
 
 #autobiography {
   background: url(../images/dot.png) repeat top left;
   height: 1050px; }
-  #autobiography .articleWrap {
-    position: absolute;
-    width: 100%;
-    top: 100px; }
-    #autobiography .articleWrap .article {
-      width: 740px;
-      height: 820px;
-      padding: 20px 40px;
+  #autobiography .articleWrap .article {
+    height: 820px; }
+    #autobiography .articleWrap .article p {
+      color: #585858;
+      letter-spacing: 0.06em; }
+      #autobiography .articleWrap .article p .bold {
+        font-weight: bolder;
+        font-size: 18px;
+        line-height: 26px;
+        color: #000000; }
+      #autobiography .articleWrap .article p .baseline {
+        text-decoration: underline;
+        color: #000000; }
+    #autobiography .articleWrap .article table {
       margin: 0 auto;
-      background-color: #ffffff; }
-      #autobiography .articleWrap .article p {
-        color: #585858;
-        letter-spacing: 0.06em; }
-        #autobiography .articleWrap .article p .bold {
-          font-weight: bolder;
-          font-size: 18px;
-          line-height: 26px;
-          color: #000000; }
-        #autobiography .articleWrap .article p .baseline {
-          text-decoration: underline;
-          color: #000000; }
-      #autobiography .articleWrap .article table {
-        margin: 0 auto;
-        border: 1px solid #b2b2b2;
-        margin-bottom: 30px; }
-        #autobiography .articleWrap .article table th, #autobiography .articleWrap .article table td {
-          text-align: center;
-          padding: 4px 6px;
-          border: 1px solid #b2b2b2; }
-        #autobiography .articleWrap .article table th {
-          background-color: #cccccc; }
-    #autobiography .articleWrap .download {
-      margin: 30px auto;
-      width: 820px;
-      text-align: right; }
-      #autobiography .articleWrap .download a {
-        padding: 5px 10px;
-        margin: 0 1px;
-        background-color: #ffffff;
-        color: #000000;
-        font-family: Arial, 'LiHei Pro', 新細明體, sans-serif; }
-        #autobiography .articleWrap .download a:hover {
-          background-color: #bcbcbc;
-          -moz-box-shadow: 4px 4px 4px 0 rgba(150, 150, 150, 0.6);
-          -webkit-box-shadow: 4px 4px 4px 0 rgba(150, 150, 150, 0.6);
-          box-shadow: 4px 4px 4px 0 rgba(150, 150, 150, 0.6); }
+      border: 1px solid #b2b2b2;
+      margin-bottom: 30px; }
+      #autobiography .articleWrap .article table th, #autobiography .articleWrap .article table td {
+        text-align: center;
+        padding: 4px 6px;
+        border: 1px solid #b2b2b2; }
+      #autobiography .articleWrap .article table th {
+        background-color: #cccccc; }
 
 #product {
   background-color: #5c5c5c;
@@ -524,3 +583,61 @@ html, body {
           box-shadow: 4px 4px 4px 0 rgba(150, 150, 150, 0.6); }
       #UX .explain .explainWrap .small {
         height: 182px; }
+
+#contact {
+  background: url(../images/contact_bg.jpg) no-repeat fixed top left;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%; }
+  #contact .about {
+    position: absolute;
+    left: 200px;
+    top: 160px;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 25px 20px; }
+    #contact .about li {
+      line-height: 20px;
+      margin: 4px 0;
+      color: #868686;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Numans', Arial, sans-serif; }
+      #contact .about li a {
+        color: #1F85BD; }
+        #contact .about li a:hover {
+          color: #ffffff; }
+          #contact .about li a:hover span {
+            text-decoration: underline; }
+    #contact .about .name {
+      font-family: 'Antic Didone', serif;
+      font-size: 30px;
+      padding: 5px 0 25px; }
+  #contact p {
+    position: absolute;
+    top: 200px;
+    right: 150px;
+    font-family: "新細明體", "PMingLiU", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 24px;
+    overflow: hidden; }
+    #contact p .me {
+      display: inline-block;
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: url(../images/me.png) no-repeat;
+      margin: 5px 15px 0 0; }
+    #contact p .shadow {
+      float: left;
+      margin-top: 20px;
+      text-shadow: 2px 2px 10px #000000;
+      filter: shadow(black, 2px, 10px); }
+      #contact p .shadow .big {
+        font-size: 50px;
+        font-family: 'Cinzel', Georgia, Cambria, "Times New Roman", Times,serif; }

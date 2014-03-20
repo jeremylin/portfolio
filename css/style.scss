@@ -7,13 +7,11 @@ html, body {
 	line-height: 1.5;
 	font-size: 14px;
 
-	a {
-		text-decoration: none;
-	}
+	ol, ul { list-style: none;}
 
-	p {
-		font-family: Arial, 'LiHei Pro', 新細明體, sans-serif;
-	}
+	a { text-decoration: none;}
+
+	p { font-family: Arial, 'LiHei Pro', "新細明體", sans-serif;}
 }
 
 @mixin navBar {
@@ -36,6 +34,13 @@ html, body {
 				border-bottom: 2px solid #ffffff;
 			}
 		}
+	}
+
+	.here {
+		background-color: #ffffff;
+		@include radius(10px);
+		height: 20px;
+		line-height: 20px;
 	}
 }
 
@@ -72,14 +77,7 @@ html, body {
 	}
 }
 
-#CV {
-	background: url(../images/wood.png) repeat top left;
-}
-
-#autobiography {
-	background: url(../images/dot.png) repeat top left;
-	height: 1050px;
-
+#CV, #autobiography {
 	.articleWrap {
 		position: absolute;
 		width: 100%;
@@ -87,43 +85,9 @@ html, body {
 
 		.article {
 			width: 740px;
-			height: 820px;
 			padding: 20px 40px;
 			margin: 0 auto;
 			background-color: #ffffff;
-
-			p {
-				color: #585858;
-				letter-spacing: 0.06em;
-
-				.bold {
-					font-weight: bolder;
-					font-size: 18px;
-					line-height: 26px;
-					color: #000000;
-				}
-
-				.baseline {
-					text-decoration: underline;
-					color: #000000;
-				}
-			}
-
-			table {
-				margin: 0 auto;
-				border: 1px solid #b2b2b2;
-				margin-bottom: 30px;
-
-				th, td {
-					text-align: center;
-					padding: 4px 6px;
-					border: 1px solid #b2b2b2;
-				}
-
-				th {
-					background-color: #cccccc;
-				}
-			}
 		}
 
 		.download {
@@ -144,6 +108,128 @@ html, body {
 				}
 			}
 		}
+	}
+}
+
+#CV {
+	background: url(../images/wood.png) repeat top left;
+	height: 1150px;
+
+	.article {
+		height: 910px;
+
+		.top {
+			position: relative;
+
+			img {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 42%;
+			}
+
+			h1 {
+				border-bottom: 1px dotted #bcbcbc;
+			}
+
+			ul {
+				padding-left: 0;
+				margin: 6px 0;
+				font-family: Arial, 'LiHei Pro', "新細明體", sans-serif;
+			}
+
+			p {
+				font-style: italic;
+			}
+		}
+
+		.bottom {
+			margin-top: 40px;
+			font-family: Arial, 'LiHei Pro', "新細明體", sans-serif;
+
+			.group {
+				overflow: hidden;
+				width: 680px;
+				margin: 15px auto;
+
+				.title {
+					width: 120px;
+					float: left;
+					text-align: right;
+					font-weight: bolder;
+				}
+
+				ul {
+					width: 500px;
+					float: right;
+					margin: 0;
+					border-left: 2px solid #cccccc;
+					color: #585858;
+
+					li {
+						line-height: 18px;
+						margin-bottom: 5px;
+						position: relative;
+
+						.subInfo {
+							font-style: italic;
+							padding-left: 20px;
+						}
+
+						a {
+							color: #1F96CE;
+						}
+
+						.right {
+							position: absolute;
+							right: 70px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#autobiography {
+	background: url(../images/dot.png) repeat top left;
+	height: 1050px;
+
+	.articleWrap .article {
+		height: 820px;
+
+		p {
+			color: #585858;
+			letter-spacing: 0.06em;
+
+			.bold {
+				font-weight: bolder;
+				font-size: 18px;
+				line-height: 26px;
+				color: #000000;
+			}
+
+			.baseline {
+				text-decoration: underline;
+				color: #000000;
+			}
+		}
+
+		table {
+			margin: 0 auto;
+			border: 1px solid #b2b2b2;
+			margin-bottom: 30px;
+
+			th, td {
+				text-align: center;
+				padding: 4px 6px;
+				border: 1px solid #b2b2b2;
+			}
+
+			th {
+				background-color: #cccccc;
+			}
+		}	
 	}
 }
 
@@ -229,4 +315,81 @@ html, body {
 			}
 		}
 	}
+}
+
+#contact {
+	background: url(../images/contact_bg.jpg) no-repeat fixed top left;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 100%;
+
+	.about {
+		position: absolute;
+		left: 200px;
+		top: 160px;
+		background-color: rgba(255, 255, 255, 0.4);
+		@include radius(15px);
+		padding: 25px 20px;
+
+		li {
+			line-height: 20px;
+			margin: 4px 0;
+			color: #868686;
+			text-align: center;
+			font-size: 14px;
+			font-family: 'Numans', Arial, sans-serif;
+
+			a {
+				color: #1F85BD;
+
+				&:hover {
+					color: #ffffff;
+
+					span {
+						text-decoration: underline;	
+					}
+				}
+			}
+		}
+
+		.name {
+			font-family: 'Antic Didone', serif;
+			font-size: 30px;
+			padding: 5px 0 25px;
+		}
+	}
+
+	p {
+		position: absolute;
+		top: 200px;
+		right: 150px;
+		font-family: "新細明體", "PMingLiU", sans-serif;
+		font-size: 18px;
+		color: #ffffff;
+		line-height: 24px;
+		overflow: hidden;
+
+		.me {
+			display: inline-block;
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: url(../images/me.png) no-repeat;
+			margin: 5px 15px 0 0; 
+		}
+
+		.shadow {
+			float: left;
+			margin-top: 20px;
+			text-shadow: 2px 2px 10px #000000;
+			filter:shadow(#000000, 2px, 10px);
+
+			.big {
+				font-size: 50px;
+				font-family: 'Cinzel', Georgia, Cambria, "Times New Roman", Times,serif;
+			}
+		}
+	}	
 }
