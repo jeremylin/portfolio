@@ -46,12 +46,14 @@ html, body {
 
 #index, #CV, #autobiography, #product, #UX, #contact {
 	position: relative;
+	min-width: 1280px;
 
 	.nav { @include navBar;}
 }
 
 #index {
-	background: url(../images/index_bg.jpg) no-repeat fixed top left;
+	background-position: fixed top left;
+	background-repeat: no-repeat;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -113,7 +115,7 @@ html, body {
 
 #CV {
 	background: url(../images/wood.png) repeat top left;
-	height: 1150px;
+	min-height: 1150px;
 
 	.article {
 		height: 910px;
@@ -256,7 +258,7 @@ html, body {
 
 #UX {
 	background-color: #50A7B8;
-	height: 800px;
+	min-height: 800px;
 
 	.explain {
 		position: absolute;

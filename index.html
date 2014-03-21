@@ -6,6 +6,13 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+			$(function(){
+			    var bgImage = (Math.floor(Math.random() * 2)+1)+ ".jpg";
+			    $('#index').css('background-image',"url('images/backgrounds/"+bgImage+"')");
+			});
+		</script>
 	</head>
 	<body>
 		<div id="index">
