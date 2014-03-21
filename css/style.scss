@@ -52,8 +52,7 @@ html, body {
 }
 
 #index {
-	background-position: fixed top left;
-	background-repeat: no-repeat;
+	background: url(../images/index_bg.jpg) no-repeat fixed top left;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
